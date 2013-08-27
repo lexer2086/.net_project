@@ -1,0 +1,28 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+    <body>
+        @using CRUD.Models;
+        
+        <div>
+            Film gallary
+            @foreach (Films c in Model)
+            {
+                <p>
+                    @c.Id @c.Title
+                    @Html.ActionLink("Edit", "Edit", "Home", new {c.Id}, new {id = "edit_"+c.Id})
+                    @Html.ActionLink("Remove", "Remove", "Home", new {c.Id}, new {id = "remove_"+c.Id})
+                </p>
+            }
+            <a href="/Home/AddFilm">Add new film</a>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+    @model CRUD.Models.Films
+        
+        <div>
+            @using(Html.BeginForm("Edit","Home", FormMethod.Post))
+            {
+                @Html.TextBoxFor(e => e.Title)
+
+                <br />
+                <input type="submit" value="Update" />
+            }
+        </div>
+</body>
+</html>

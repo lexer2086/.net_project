@@ -1,0 +1,28 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddFilm</title>
+</head>
+<body>
+    <div>
+        @model CRUD.Models.Films
+        
+        @using(Html.BeginForm("AddFilm","Home", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(e => e.Id, new { Value = 10})
+            @Html.TextBoxFor(e => e.Title, new { Value = "Island"})
+            <br />
+            
+            
+            <input type="submit" value="Create" />
+        }
+    </div>
+</body>
+</html>
