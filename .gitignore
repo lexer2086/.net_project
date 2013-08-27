@@ -1,2 +1,6 @@
 *_ReSharper.CRUD
 *packages
+*CRUD/bin
+*CRUD/obj
+*CRUD/bin/*
+*CRUD/obj/*
